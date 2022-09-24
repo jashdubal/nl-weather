@@ -4,14 +4,12 @@ import random
 import time
 from weather import Weather
 
-
 import data
 from nanoleaf import Nanoleaf, PanelUpdate
 
 nl = Nanoleaf()
 nl1 = Nanoleaf()
 weath = Weather()
-
 
 # random hex colors
 colors = ["#92ac1d", "#58f982", "#bf6070",
@@ -325,7 +323,6 @@ class Conditions():
         PanelUpdate(5, 19, colorcloud),
         PanelUpdate(5, 20, colorcloud),
 
-
         PanelUpdate(4, 7, colorcloud),
         PanelUpdate(4, 8, colorcloud),
         PanelUpdate(4, 9, colorcloud),
@@ -338,13 +335,11 @@ class Conditions():
         PanelUpdate(4, 16, colorcloud),
         PanelUpdate(4, 17, colorcloud),
 
-
         PanelUpdate(3, 10, colorcloud),
         PanelUpdate(3, 11, colorcloud),
         PanelUpdate(3, 12, colorcloud),
         PanelUpdate(3, 13, colorcloud),
         PanelUpdate(3, 14, colorcloud),
-
 
     ]
 
@@ -580,77 +575,85 @@ class Nums():
         PanelUpdate(4, 16, color1, 10),
         PanelUpdate(4, 17, color1, 10),
         PanelUpdate(4, 18, color1, 10),
+
         PanelUpdate(6, 11, color1, 10),
         PanelUpdate(6, 12, color1, 10),
         PanelUpdate(6, 13, color1, 10),
         PanelUpdate(6, 14, color1, 10),
         PanelUpdate(6, 15, color1, 10),
+        PanelUpdate(6, 16, color1, 10),
+
+        PanelUpdate(8, 9, color1, 10),
         PanelUpdate(8, 10, color1, 10),
         PanelUpdate(8, 11, color1, 10),
         PanelUpdate(8, 12, color1, 10),
         PanelUpdate(8, 13, color1, 10),
         PanelUpdate(8, 14, color1, 10),
-        PanelUpdate(6, 16, color1, 10),
-        PanelUpdate(8, 9, color1, 10),
 
-        PanelUpdate(4, 13, color1, 10),
+        PanelUpdate(6, 16, color1, 10),
+
         # PanelUpdate(5, 13, color1, 10),
         # PanelUpdate(5, 12, color1, 10),
-        PanelUpdate(6, 12, color1, 10),
-        PanelUpdate(6, 11, color1, 10),
-        PanelUpdate(4, 18, color1, 10),
-        PanelUpdate(4, 17, color1, 10),
+
         PanelUpdate(5, 17, color1, 10),
         PanelUpdate(5, 16, color1, 10),
-        PanelUpdate(6, 16, color1, 10),
-        PanelUpdate(6, 15, color1, 10),
-        PanelUpdate(6, 11, color1, 10),
+
         # PanelUpdate(7, 11, color1, 10),
         # PanelUpdate(7, 10, color1, 10),
-        PanelUpdate(8, 10, color1, 10),
-        PanelUpdate(8, 9, color1, 10),
-        PanelUpdate(6, 15, color1, 10),
+
         PanelUpdate(7, 15, color1, 10),
         PanelUpdate(7, 14, color1, 10),
-        PanelUpdate(8, 14, color1, 10),
-        PanelUpdate(8, 13, color1, 10),
+
     ]
 
     updatesL0 = [
-    PanelUpdate(3,8,color),
-    PanelUpdate(3,9,color),
-    PanelUpdate(3,10,color),
-    PanelUpdate(3,11,color),
-    PanelUpdate(3,12,color),
-    PanelUpdate(3,13,color),
-    PanelUpdate(4,11,color),
-    PanelUpdate(4,12,color),
-    PanelUpdate(6,9,color),
-    PanelUpdate(6,10,color),
-    PanelUpdate(7,4,color),
-    PanelUpdate(7,5,color),
-    PanelUpdate(7,6,color),
-    PanelUpdate(7,7,color),
-    PanelUpdate(7,8,color),
-    PanelUpdate(7,9,color),
-    PanelUpdate(6,5,color),
-    PanelUpdate(6,6,color),
-    PanelUpdate(4,7,color),
-    PanelUpdate(4,8,color)
-    ]
-
-    updatesL1 = [
+        PanelUpdate(3, 8, color),
         PanelUpdate(3, 9, color),
         PanelUpdate(3, 10, color),
         PanelUpdate(3, 11, color),
-        PanelUpdate(4, 9, color),
-        PanelUpdate(4, 10, color),
+        PanelUpdate(3, 12, color),
+        PanelUpdate(3, 13, color),
+
+        PanelUpdate(4, 7, color),
+        PanelUpdate(4, 8, color)
         PanelUpdate(4, 11, color),
         PanelUpdate(4, 12, color),
+
+        PanelUpdate(5, 6, color),
+        PanelUpdate(5, 7, color),
+        PanelUpdate(5, 10, color),
+        PanelUpdate(5, 11, color),
+
+        PanelUpdate(6, 5, color),
+        PanelUpdate(6, 6, color),
+        PanelUpdate(6, 9, color),
+        PanelUpdate(6, 10, color),
+
+        PanelUpdate(7, 4, color),
+        PanelUpdate(7, 5, color),
+        PanelUpdate(7, 6, color),
+        PanelUpdate(7, 7, color),
+        PanelUpdate(7, 8, color),
+        PanelUpdate(7, 9, color),
+
+    ]
+
+    updatesL1 = [
+        PanelUpdate(3, 8, color),
+        PanelUpdate(3, 9, color),
+        PanelUpdate(3, 10, color),
+        PanelUpdate(3, 11, color),
+
+        PanelUpdate(4, 9, color),
+        PanelUpdate(4, 10, color),
+
+
         PanelUpdate(5, 8, color),
         PanelUpdate(5, 9, color),
+
         PanelUpdate(6, 7, color),
         PanelUpdate(6, 8, color),
+
         PanelUpdate(7, 4, color),
         PanelUpdate(7, 5, color),
         PanelUpdate(7, 6, color),
@@ -660,28 +663,32 @@ class Nums():
     ]
 
     updatesL2 = [
-        PanelUpdate(3,8,color),
-        PanelUpdate(3,9,color),
-        PanelUpdate(3,10,color),
-        PanelUpdate(3,11,color),
-        PanelUpdate(3,12,color),
-        PanelUpdate(3,13,color),
-        PanelUpdate(4,11,color),
-        PanelUpdate(4,12,color),
-        PanelUpdate(5,6,color),
-        PanelUpdate(5,7,color),
-        PanelUpdate(5,8,color),
-        PanelUpdate(5,9,color),
-        PanelUpdate(5,10,color),
-        PanelUpdate(5,11,color),
-        PanelUpdate(6,5,color),
+        PanelUpdate(3, 8, color),
+        PanelUpdate(3, 9, color),
+        PanelUpdate(3, 10, color),
+        PanelUpdate(3, 11, color),
+        PanelUpdate(3, 12, color),
+        PanelUpdate(3, 13, color),
+
+        PanelUpdate(4, 11, color),
+        PanelUpdate(4, 12, color),
+
+        PanelUpdate(5, 6, color),
+        PanelUpdate(5, 7, color),
+        PanelUpdate(5, 8, color),
+        PanelUpdate(5, 9, color),
+        PanelUpdate(5, 10, color),
+        PanelUpdate(5, 11, color),
+
+        PanelUpdate(6, 5, color),
         # PanelUpdate(6,7,color),
-        PanelUpdate(6,6,color),
-        PanelUpdate(7,4,color),
-        PanelUpdate(7,5,color),
-        PanelUpdate(7,6,color),
-        PanelUpdate(7,8,color),
-        PanelUpdate(7,9,color)
+        PanelUpdate(6, 6, color),
+
+        PanelUpdate(7, 4, color),
+        PanelUpdate(7, 5, color),
+        PanelUpdate(7, 6, color),
+        PanelUpdate(7, 8, color),
+        PanelUpdate(7, 9, color)
     ]
 
     updatesL3 = [
@@ -691,16 +698,20 @@ class Nums():
         PanelUpdate(3, 11, color),
         PanelUpdate(3, 12, color),
         PanelUpdate(3, 13, color),
+
         PanelUpdate(4, 11, color),
         PanelUpdate(4, 12, color),
+
         PanelUpdate(5, 6, color),
         PanelUpdate(5, 7, color),
         PanelUpdate(5, 8, color),
         PanelUpdate(5, 9, color),
         PanelUpdate(5, 10, color),
         PanelUpdate(5, 11, color),
+
         PanelUpdate(6, 9, color),
         PanelUpdate(6, 10, color),
+
         PanelUpdate(7, 4, color),
         PanelUpdate(7, 5, color),
         PanelUpdate(7, 6, color),
@@ -711,68 +722,81 @@ class Nums():
 
     updatesR9 = [
         PanelUpdate(4, 13, color1),
-        PanelUpdate(5, 13, color1),
-        PanelUpdate(5, 12, color1),
-        PanelUpdate(6, 12, color1),
-        PanelUpdate(6, 11, color1),
         PanelUpdate(4, 18, color1),
-        PanelUpdate(4, 13, color1),
         PanelUpdate(4, 14, color1),
         PanelUpdate(4, 15, color1),
         PanelUpdate(4, 16, color1),
         PanelUpdate(4, 17, color1),
-        PanelUpdate(4, 18, color1),
-        PanelUpdate(6, 11, color1),
+
+        PanelUpdate(5, 13, color1),
+        PanelUpdate(5, 12, color1),
+        PanelUpdate(5, 17, color1),
+        PanelUpdate(5, 16, color1),
+
         PanelUpdate(6, 12, color1),
+        PanelUpdate(6, 11, color1),
         PanelUpdate(6, 13, color1),
         PanelUpdate(6, 14, color1),
         PanelUpdate(6, 15, color1),
-        PanelUpdate(4, 18, color1),
-        PanelUpdate(4, 17, color1),
-        PanelUpdate(5, 17, color1),
-        PanelUpdate(5, 16, color1),
         PanelUpdate(6, 16, color1),
-        PanelUpdate(6, 15, color1),
+
+
+
         PanelUpdate(7, 15, color1),
         PanelUpdate(7, 14, color1),
+
         PanelUpdate(8, 14, color1),
         PanelUpdate(8, 13, color1),
     ]
 
     updatesR6 = [
         PanelUpdate(4, 13, color1),
+
         PanelUpdate(5, 13, color1),
         PanelUpdate(5, 12, color1),
+
         PanelUpdate(6, 12, color1),
         PanelUpdate(6, 11, color1),
+        PanelUpdate(6, 15, color1),
+        PanelUpdate(6, 14, color1),
+        PanelUpdate(6, 13, color1),
+        PanelUpdate(6, 16, color1),
+
+
         PanelUpdate(7, 11, color1),
         PanelUpdate(7, 10, color1),
+        PanelUpdate(7, 15, color1),
+        PanelUpdate(7, 14, color1),
+
         PanelUpdate(8, 10, color1),
         PanelUpdate(8, 9, color1),
-        PanelUpdate(8, 10, color1),
         PanelUpdate(8, 11, color1),
         PanelUpdate(8, 12, color1),
         PanelUpdate(8, 13, color1),
         PanelUpdate(8, 14, color1),
-        PanelUpdate(6, 15, color1),
-        PanelUpdate(7, 15, color1),
-        PanelUpdate(7, 14, color1),
-        PanelUpdate(6, 14, color1),
-        PanelUpdate(6, 13, color1),
+
+
+
     ]
     updatesR7 = [
         PanelUpdate(4, 13, color1),
-        PanelUpdate(5, 13, color1),
-        PanelUpdate(5, 12, color1),
-        PanelUpdate(6, 12, color1),
-        PanelUpdate(6, 11, color1),
-        PanelUpdate(4, 18, color1),
+        PanelUpdate(4, 14, color1),
+        PanelUpdate(4, 15, color1),
+        PanelUpdate(4, 16, color1),
         PanelUpdate(4, 17, color1),
+        PanelUpdate(4, 18, color1),
+
+
+
         PanelUpdate(5, 17, color1),
         PanelUpdate(5, 16, color1),
+
         PanelUpdate(6, 16, color1),
         PanelUpdate(6, 15, color1),
+
         PanelUpdate(7, 14, color1),
+        PanelUpdate(7, 15, color1),
+
         PanelUpdate(8, 14, color1),
         PanelUpdate(8, 13, color1),
     ]
@@ -783,40 +807,32 @@ class Nums():
         PanelUpdate(4, 16, color1),
         PanelUpdate(4, 17, color1),
         PanelUpdate(4, 18, color1),
+
         PanelUpdate(6, 11, color1),
         PanelUpdate(6, 12, color1),
         PanelUpdate(6, 13, color1),
         PanelUpdate(6, 14, color1),
         PanelUpdate(6, 15, color1),
+        PanelUpdate(6, 16, color1),
+
+        PanelUpdate(8, 9, color1),
         PanelUpdate(8, 10, color1),
         PanelUpdate(8, 11, color1),
         PanelUpdate(8, 12, color1),
         PanelUpdate(8, 13, color1),
         PanelUpdate(8, 14, color1),
-        PanelUpdate(6, 16, color1),
-        PanelUpdate(8, 9, color1),
 
-        PanelUpdate(4, 13, color1),
-        PanelUpdate(5, 13, color1),
-        PanelUpdate(5, 12, color1),
-        PanelUpdate(6, 12, color1),
-        PanelUpdate(6, 11, color1),
-        PanelUpdate(4, 18, color1),
-        PanelUpdate(4, 17, color1),
         PanelUpdate(5, 17, color1),
         PanelUpdate(5, 16, color1),
-        PanelUpdate(6, 16, color1),
-        PanelUpdate(6, 15, color1),
-        PanelUpdate(6, 11, color1),
+        PanelUpdate(5, 13, color1),
+        PanelUpdate(5, 12, color1),
+
+
         PanelUpdate(7, 11, color1),
         PanelUpdate(7, 10, color1),
-        PanelUpdate(8, 10, color1),
-        PanelUpdate(8, 9, color1),
-        PanelUpdate(6, 15, color1),
         PanelUpdate(7, 15, color1),
         PanelUpdate(7, 14, color1),
-        PanelUpdate(8, 14, color1),
-        PanelUpdate(8, 13, color1), ]
+ ]
 
     updatesR2 = [
         PanelUpdate(4, 13, color1),
@@ -828,31 +844,26 @@ class Nums():
 
         PanelUpdate(6, 11, color1),
         PanelUpdate(6, 12, color1),
+        PanelUpdate(6, 13, color1),
+        PanelUpdate(6, 14, color1),
         PanelUpdate(6, 15, color1),
+        PanelUpdate(6, 16, color1),
 
+        PanelUpdate(8, 9, color1),
         PanelUpdate(8, 10, color1),
         PanelUpdate(8, 11, color1),
         PanelUpdate(8, 12, color1),
         PanelUpdate(8, 13, color1),
         PanelUpdate(8, 14, color1),
-        PanelUpdate(6, 16, color1),
-        PanelUpdate(8, 9, color1),
-        PanelUpdate(6, 12, color1),
-        PanelUpdate(6, 11, color1),
-        PanelUpdate(4, 18, color1),
-        PanelUpdate(4, 17, color1),
+
+
         PanelUpdate(5, 17, color1),
         PanelUpdate(5, 16, color1),
-        PanelUpdate(6, 16, color1),
-        PanelUpdate(6, 15, color1),
-        PanelUpdate(6, 11, color1),
+
+
         PanelUpdate(7, 11, color1),
         PanelUpdate(7, 10, color1),
-        PanelUpdate(8, 10, color1),
-        PanelUpdate(8, 9, color1),
-        PanelUpdate(6, 15, color1),
-        PanelUpdate(8, 14, color1),
-        PanelUpdate(8, 13, color1),
+
     ]
 
     updatesR0 = [
@@ -863,6 +874,8 @@ class Nums():
         PanelUpdate(4, 17, color1),
         PanelUpdate(4, 18, color1),
 
+        PanelUpdate(6, 12, color1),
+        PanelUpdate(6, 16, color1),
         PanelUpdate(6, 11, color1),
         PanelUpdate(6, 12, color1),
         PanelUpdate(6, 15, color1),
@@ -872,38 +885,37 @@ class Nums():
         PanelUpdate(8, 12, color1),
         PanelUpdate(8, 13, color1),
         PanelUpdate(8, 14, color1),
-        PanelUpdate(6, 16, color1),
         PanelUpdate(8, 9, color1),
 
         PanelUpdate(5, 13, color1),
         PanelUpdate(5, 12, color1),
-        PanelUpdate(6, 12, color1),
-        PanelUpdate(6, 11, color1),
+
         PanelUpdate(4, 18, color1),
         PanelUpdate(4, 17, color1),
+
         PanelUpdate(5, 17, color1),
         PanelUpdate(5, 16, color1),
-        PanelUpdate(6, 16, color1),
-        PanelUpdate(6, 15, color1),
-        PanelUpdate(6, 11, color1),
+
+
         PanelUpdate(7, 11, color1),
         PanelUpdate(7, 10, color1),
-        PanelUpdate(8, 10, color1),
-        PanelUpdate(8, 9, color1),
+
+
         PanelUpdate(6, 15, color1),
         PanelUpdate(7, 15, color1),
         PanelUpdate(7, 14, color1),
-        PanelUpdate(8, 14, color1),
-        PanelUpdate(8, 13, color1),
+
     ]
 
     updatesR1 = [
+        PanelUpdate(4, 13, color1),
         PanelUpdate(4, 14, color1),
         PanelUpdate(4, 15, color1),
         PanelUpdate(5, 14, color1),
-        PanelUpdate(5, 14, color1),
-        PanelUpdate(6, 14, color1),
+        PanelUpdate(5, 15, color1),
+        PanelUpdate(4, 16, color1),
         PanelUpdate(6, 13, color1),
+        PanelUpdate(6, 14, color1),
         PanelUpdate(7, 13, color1),
         PanelUpdate(7, 12, color1),
         PanelUpdate(8, 12, color1),
@@ -921,40 +933,36 @@ class Nums():
         # PanelUpdate(4, 16, color1, 10),
         PanelUpdate(4, 17, color1, 10),
         PanelUpdate(4, 18, color1, 10),
+
         PanelUpdate(6, 11, color1, 10),
         PanelUpdate(6, 12, color1, 10),
         PanelUpdate(6, 13, color1, 10),
         PanelUpdate(6, 14, color1, 10),
         PanelUpdate(6, 15, color1, 10),
+        PanelUpdate(6, 16, color1, 10),
         # anelUpdate(8, 10, color1, 10),
         # PanelUpdate(8, 11, color1, 10),
         # PanelUpdate(8, 12, color1, 10),
         PanelUpdate(8, 13, color1, 10),
         PanelUpdate(8, 14, color1, 10),
-        PanelUpdate(6, 16, color1, 10),
+
         # PanelUpdate(8, 9, color1, 10),
 
-        PanelUpdate(4, 13, color1, 10),
+
         PanelUpdate(5, 13, color1, 10),
         PanelUpdate(5, 12, color1, 10),
         PanelUpdate(6, 12, color1, 10),
         PanelUpdate(6, 11, color1, 10),
-        PanelUpdate(4, 18, color1, 10),
-        PanelUpdate(4, 17, color1, 10),
+
         PanelUpdate(5, 17, color1, 10),
         PanelUpdate(5, 16, color1, 10),
-        PanelUpdate(6, 16, color1, 10),
-        PanelUpdate(6, 15, color1, 10),
-        PanelUpdate(6, 11, color1, 10),
+  
         # PanelUpdate(7, 11, color1, 10),
         # PanelUpdate(7, 10, color1, 10),
-        PanelUpdate(8, 10, color1, 10),
-        PanelUpdate(8, 9, color1, 10),
-        PanelUpdate(6, 15, color1, 10),
+
         PanelUpdate(7, 15, color1, 10),
         PanelUpdate(7, 14, color1, 10),
-        PanelUpdate(8, 14, color1, 10),
-        PanelUpdate(8, 13, color1, 10),
+
     ]
 
     updatesR5 = [
@@ -1119,6 +1127,5 @@ while True:
     time.sleep(10)
     fill(nl, fill_color)
     time.sleep(2)
-
 
 # updates1 = [PanelUpdate(row, col, random.choice(colors), 10) for row, col in data.panel_positions[8]]
