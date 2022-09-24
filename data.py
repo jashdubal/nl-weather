@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 panel_positions: list[list[tuple[int, int]]] = [
     [
         # Controller 0

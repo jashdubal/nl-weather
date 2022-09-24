@@ -1,3 +1,4 @@
+from __future__ import annotations
 import http.client as httplib
 import json
 import socket
@@ -24,7 +25,7 @@ class PanelUpdate:
     row: int
     col: int
     color: str
-    transition_time: int = 0.5
+    transition_time: int = 1
 
 
 @dataclass
@@ -84,14 +85,14 @@ class Nanoleaf:
 
     def __init__(self, demo_mode: bool = False):
         if demo_mode:
-            panels = self._initialize_controller(self.IPS[7], self.AUTH_CODES[7])
+            panels = self._initialize_controller(self.IPS[3], self.AUTH_CODES[3])
             self._panel_position_map: dict[tuple[int, int], Position] = {}
             for j, panel in enumerate(panels):
-                row, col = data.panel_positions[7][j]
+                row, col = data.panel_positions[3][j]
                 self._panel_position_map[(row, col)] = Position(
                     row=row,
                     col=col,
-                    controller_id= 7,
+                    controller_id=3,
                     panel_id=panel["panelId"],
                 )
         else:
