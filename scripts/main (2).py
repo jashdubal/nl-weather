@@ -8,13 +8,13 @@ from weather import Weather
 import data
 from nanoleaf import Nanoleaf, PanelUpdate
 
-nl = Nanoleaf()
-nl1 = Nanoleaf()
+# nl = Nanoleaf()
+# nl1 = Nanoleaf()
 weath = Weather()
 
 # random hex colors
 colors = ["#92ac1d", "#58f982", "#bf6070", "#0eff1f", "#8d2b5d", "#db684c", "#FFFFFF"]
-color = "#0000FF"
+color = "#000000"
 color1 = "#92ac1d"
 
 class Nums():
@@ -665,41 +665,19 @@ class Nums():
 
 foo  = Nums()
 
-# # here
-# 
-# updates = [
-#     PanelUpdate(row, col, random.choice(colors), 10) for row, col in data.panel_positions[0],
-#     PanelUpdate(row, col, random.choice(colors), 10) for row, col in data.panel_positions[1],
-#     PanelUpdate(row, col, random.choice(colors), 10) for row, col in data.panel_positions[2],
-#     PanelUpdate(row, col, random.choice(colors), 10) for row, col in data.panel_positions[3],
-#     PanelUpdate(row, col, random.choice(colors), 10) for row, col in data.panel_positions[4],
-#     PanelUpdate(row, col, random.choice(colors), 10) for row, col in data.panel_positions[5],
-#     PanelUpdate(row, col, random.choice(colors), 10) for row, col in data.panel_positions[6],
-#     PanelUpdate(row, col, random.choice(colors), 10) for row, col in data.panel_positions[7],
-#     PanelUpdate(row, col, random.choice(colors), 10) for row, col in data.panel_positions[8],
-# ]
-# 
-# for update in updates:
-#     nl.update(update)
-# time.sleep(1)
-# 
-# # here
-
 while True:
-    the_updates = []
-    first_digit = 2
-    second_digit = weath.temp_second
-    if(first_digit == 2):
-        the_updates = foo.updatesR2
-    else:
-        the_updates = foo.updatesL8
 
-    nl.update(the_updates)
-    # nl1 = update(foo.updateR8)
-    time.sleep(5)
+    first_digit = weath.temp_first
+#     first_digit = 1
+
+    nl = update(foo.updateL8)
+    nl1 = update(foo.updateR8)
+    print(first_digit)
 
 
 
 
-# updates1 = [PanelUpdate(row, col, random.choice(colors), 10) for row, col in data.panel_positions[8]]
 
+    #updates1 = [PanelUpdate(row, col, random.choice(colors), 10) for row, col in data.panel_positions[8]]
+
+    time.sleep(1)

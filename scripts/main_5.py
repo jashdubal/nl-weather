@@ -4,12 +4,14 @@ import random
 import time
 from weather import Weather
 
+
 import data
 from nanoleaf import Nanoleaf, PanelUpdate
 
 nl = Nanoleaf()
 nl1 = Nanoleaf()
 weath = Weather()
+
 
 # random hex colors
 colors = ["#92ac1d", "#58f982", "#bf6070",
@@ -64,7 +66,7 @@ class Conditions():
         PanelUpdate(8, 16, colorwhitesnow),
 
         PanelUpdate(8, 17, colorwhitesnow),
-        PanelUpdate(9, 11, colorwhitesnow),
+        PanelUpdate(9, 11, colorwhitesnow)
 
     ]
 
@@ -174,7 +176,7 @@ class Conditions():
         PanelUpdate(8, 9, colorRain),
         PanelUpdate(9, 7, colorRain),
         PanelUpdate(9, 8, colorRain),
-        PanelUpdate(9, 9, colorRain),
+        PanelUpdate(9, 9, colorRain)
     ]
 
     updatePartCloud = [
@@ -282,7 +284,7 @@ class Conditions():
         PanelUpdate(7, 16, colorcloud),
         PanelUpdate(7, 17, colorcloud),
         PanelUpdate(7, 18, colorcloud),
-        PanelUpdate(7, 19, colorcloud),
+        PanelUpdate(7, 19, colorcloud)
 
     ]
 
@@ -323,6 +325,7 @@ class Conditions():
         PanelUpdate(5, 19, colorcloud),
         PanelUpdate(5, 20, colorcloud),
 
+
         PanelUpdate(4, 7, colorcloud),
         PanelUpdate(4, 8, colorcloud),
         PanelUpdate(4, 9, colorcloud),
@@ -335,11 +338,13 @@ class Conditions():
         PanelUpdate(4, 16, colorcloud),
         PanelUpdate(4, 17, colorcloud),
 
+
         PanelUpdate(3, 10, colorcloud),
         PanelUpdate(3, 11, colorcloud),
         PanelUpdate(3, 12, colorcloud),
         PanelUpdate(3, 13, colorcloud),
-        PanelUpdate(3, 14, colorcloud),
+        PanelUpdate(3, 14, colorcloud)
+
 
     ]
 
@@ -615,7 +620,7 @@ class Nums():
         PanelUpdate(3, 13, color),
 
         PanelUpdate(4, 7, color),
-        PanelUpdate(4, 8, color)
+        PanelUpdate(4, 8, color),
         PanelUpdate(4, 11, color),
         PanelUpdate(4, 12, color),
 
@@ -832,7 +837,7 @@ class Nums():
         PanelUpdate(7, 10, color1),
         PanelUpdate(7, 15, color1),
         PanelUpdate(7, 14, color1),
- ]
+    ]
 
     updatesR2 = [
         PanelUpdate(4, 13, color1),
@@ -956,7 +961,7 @@ class Nums():
 
         PanelUpdate(5, 17, color1, 10),
         PanelUpdate(5, 16, color1, 10),
-  
+
         # PanelUpdate(7, 11, color1, 10),
         # PanelUpdate(7, 10, color1, 10),
 
@@ -1019,6 +1024,13 @@ class Nums():
         PanelUpdate(9, 19, color),
     ]
 
+    updateNeg = [
+        PanelUpdate(4, 1, color),
+        PanelUpdate(4, 2, color),
+        PanelUpdate(4, 3, color),
+        PanelUpdate(4, 4, color)
+    ]
+
 
 foo = Nums()
 cond = Conditions()
@@ -1034,98 +1046,111 @@ def fill(nl, color_fill):
 first_digit = 1
 
 while True:
+    conditions = ["sunny", "partly cloudy", "cloudy", "rainy", "snowy"]
+    first_digits = [2, 1, 1, 1, 1]
+    second_digits = [4, 5, 4, 3, 4]
+    is_negative = [False, False, False, False, True]
     the_c = foo.UpdateC
     the_updates = []
     the_updatesL = []
     the_updatesR = []
+    the_updatesNeg = []
+
     first_digit = weath.temp_first
     second_digit = weath.temp_second
     weather_cond = weath.temp_condition
 
-    first_digit = 4
-    second_digit = 5
-    weather_cond = "party cloudy"
+    for j in range(2):
+        if (j == 1):
+            fill_color = "#000080"
+        else:
+            fill_color = "#47E0ED"
 
-    # here
-    if first_digit == 1:
-        the_updatesL = foo.updatesL1
-    elif first_digit == 2:
-        the_updatesL = foo.updatesL2
-    elif first_digit == 3:
-        the_updatesL = foo.updatesL3
-    elif first_digit == 4:
-        the_updatesL = foo.updatesL4
-    elif first_digit == 5:
-        the_updatesL = foo.updatesL5
-    elif first_digit == 6:
-        the_updatesL = foo.updatesL6
-    elif first_digit == 7:
-        the_updatesL = foo.updatesL7
-    elif first_digit == 8:
-        the_updatesL = foo.updatesL8
-    elif first_digit == 9:
-        the_updatesL = foo.updatesL9
+        for i in range(len(conditions)):
+            first_digit = first_digits[i]
+            second_digit = second_digits[i]
+            weather_cond = conditions[i]
 
-    if second_digit == 1:
-        the_updatesR = foo.updatesR1
-    elif second_digit == 2:
-        the_updatesR = foo.updatesR2
-    elif second_digit == 3:
-        the_updatesR = foo.updatesR3
-    elif second_digit == 4:
-        the_updatesR = foo.updatesR4
-    elif second_digit == 5:
-        the_updatesR = foo.updatesR5
-    elif second_digit == 6:
-        the_updatesR = foo.updatesR6
-    elif second_digit == 7:
-        the_updatesR = foo.updatesR7
-    elif second_digit == 8:
-        the_updatesR = foo.updatesR8
-    elif second_digit == 9:
-        the_updatesR = foo.updatesR9
-    elif second_digit == 0:
-        the_updatesR = foo.updatesR0
+            # here
+            if first_digit == 1:
+                the_updatesL = foo.updatesL1
+            elif first_digit == 2:
+                the_updatesL = foo.updatesL2
+            elif first_digit == 3:
+                the_updatesL = foo.updatesL3
+            elif first_digit == 4:
+                the_updatesL = foo.updatesL4
+            elif first_digit == 5:
+                the_updatesL = foo.updatesL5
+            elif first_digit == 6:
+                the_updatesL = foo.updatesL6
+            elif first_digit == 7:
+                the_updatesL = foo.updatesL7
+            elif first_digit == 8:
+                the_updatesL = foo.updatesL8
+            elif first_digit == 9:
+                the_updatesL = foo.updatesL9
 
-    # here
+            if second_digit == 1:
+                the_updatesR = foo.updatesR1
+            elif second_digit == 2:
+                the_updatesR = foo.updatesR2
+            elif second_digit == 3:
+                the_updatesR = foo.updatesR3
+            elif second_digit == 4:
+                the_updatesR = foo.updatesR4
+            elif second_digit == 5:
+                the_updatesR = foo.updatesR5
+            elif second_digit == 6:
+                the_updatesR = foo.updatesR6
+            elif second_digit == 7:
+                the_updatesR = foo.updatesR7
+            elif second_digit == 8:
+                the_updatesR = foo.updatesR8
+            elif second_digit == 9:
+                the_updatesR = foo.updatesR9
+            elif second_digit == 0:
+                the_updatesR = foo.updatesR0
 
-    # here
+            # here
 
-    if weather_cond == 'snowy':
-        the_updates = cond.UpdateSnow
+            # here
 
-    if weather_cond == 'rainy':
-        the_updates = cond.updateRain
+            if weather_cond == 'snowy':
+                the_updates = cond.UpdateSnow
 
-    if weather_cond == 'cloudy':
-        the_updates = cond.updatecloud
+            if weather_cond == 'rainy':
+                the_updates = cond.updateRain
 
-    if weather_cond == 'party cloudy':
-        the_updates = cond.updatePartCloud
+            if weather_cond == 'cloudy':
+                the_updates = cond.updatecloud
 
-    if weather_cond == 'sunny':
-        the_updates = cond.updateSun
+            if weather_cond == 'party cloudy':
+                the_updates = cond.updatePartCloud
 
-    # here
+            if weather_cond == 'sunny':
+                the_updates = cond.updateSun
 
-    if (weath.dark_mode):
-        fill_color = "#000080"
-    else:
-        fill_color = "#000080"
+            # here
 
-    fill(nl, fill_color)
-    time.sleep(1)
+            fill(nl, fill_color)
+            time.sleep(1)
 
-    nl.update(the_updatesL)
-    nl.update(the_updatesR)
-    nl.update(the_c)
+            if (is_negative[i]):
+                the_updatesNeg = foo.updateNeg
+                nl.update(the_updatesNeg)
 
-    time.sleep(10)
-    fill(nl, fill_color)
-    time.sleep(2)
-    nl.update(the_updates)
-    time.sleep(10)
-    fill(nl, fill_color)
-    time.sleep(2)
+            nl.update(the_updatesL)
+            nl.update(the_updatesR)
+            nl.update(the_c)
+
+            time.sleep(10)
+            fill(nl, fill_color)
+            time.sleep(2)
+            nl.update(the_updates)
+            time.sleep(10)
+            fill(nl, fill_color)
+            time.sleep(2)
+
 
 # updates1 = [PanelUpdate(row, col, random.choice(colors), 10) for row, col in data.panel_positions[8]]
