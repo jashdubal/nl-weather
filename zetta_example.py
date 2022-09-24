@@ -250,6 +250,7 @@ def z_of_zetta(positionD):
     '''
     This function display alphabet "Z" in white on the display. The size of the alphabet is fixed and occupies the inner 6 rows of the display.
     '''
+
     frames = []
     frames_final = []
 
@@ -259,8 +260,9 @@ def z_of_zetta(positionD):
     T = 5
     counter = 0  # for row 7 and 8(in otherwords controller 5 and 6) we need to light up 12th and 13th, and 10th and 11th respectively.
     # And,variable counter helps to reduce the number of lines.
-
     for i, panelData in enumerate(positionD):
+        print(panelData)
+
         if i > 1 and i < 8:
             if i == 2:
                 for j, panel in enumerate(panelData):

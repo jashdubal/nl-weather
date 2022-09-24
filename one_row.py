@@ -69,16 +69,36 @@ red = (255,0,0)
 
 # [x.set_all_colors((100, 180, 255)) for x in digital_twin]
 
+xx = 255
+yy = 0
+greenVal = 0
+j = 0
+for i in range(255):
+    if(j > len(controller6)):
+        j = 0
 
-for i in range(3):
-    colorX = (int(random.random()*255), int(random.random()*255), int(random.random()*255))
-    colorY = (int(random.random()*255), int(random.random()*255), int(random.random()*255))
+    if(xx >= 255 or yy >= 255):
+        if(xx >yy):
+            xx = 0
+            yy = 255
+        else:
+            xx = 255
+            yy = 0
 
-    [digital_twin[0].set_color(x, colorX) for x in controller6[4:17]]
-    [digital_twin[0].set_color(x, orange) for x in controller6[4:17:3]]
-    [digital_twin[0].set_color(x, colorY) for x in controller6[5:17:3]]
+    xx -= 1
+    yy += 1
+    
+    color = (xx, yy, 0)
+    # colorX = (int(random.random()*255), int(random.random()*255), int(random.random()*255))
+    # colorY = (int(random.random()*255), int(random.random()*255), int(random.random()*255))
+
+    [digital_twin[0].set_color(x, color) for x in controller6[0:j]]
+    # [digital_twin[0].set_color(x, orange) for x in controller6[4:17:3]]
+    # [digital_twin[0].set_color(x, colorY) for x in controller6[5:17:3]]
     [x.sync() for x in digital_twin]
-    time.sleep(5)
+    time.sleep(0.01)
+    j+=1
+    
 
 
 # This final line syncs the digital twin with the actual controllers, applying everything set up before.
